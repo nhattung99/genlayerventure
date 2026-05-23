@@ -1,0 +1,43 @@
+{
+  "invest_recommendation_example": {
+    "recommendation": "INVEST",
+    "confidence": 88,
+    "technical_score": 92,
+    "market_score": 84,
+    "scam_probability": 4,
+    "summary": "Aegis Protocol presents a solid implementation of zero-knowledge circuits addressing a critical need for privacy-preserving compliance. The github activity shows seasoned cryptographic contributions.",
+    "strengths": [
+      "Highly skilled cryptographic team",
+      "Clear target market addressing regulatory compliance",
+      "Active github repository with zero copy-paste boilerplate"
+    ],
+    "weaknesses": [
+      "High dependency on gas optimization for zk-SNARK verifiers",
+      "Intense competition in the ZK space"
+    ],
+    "risks": [
+      "Regulatory pushback on privacy pools",
+      "Complexity of audit vectors"
+    ]
+  },
+  "pass_recommendation_example": {
+    "recommendation": "PASS",
+    "confidence": 94,
+    "technical_score": 28,
+    "market_score": 35,
+    "scam_probability": 82,
+    "summary": "Doggoswap shows extremely high scam probability. The code is an exact clone of Uniswap v2 with zero modified parameters besides the token name. Marketing material is highly speculative and lacks depth.",
+    "strengths": [
+      "High social media meme potential"
+    ],
+    "weaknesses": [
+      "Copied codebase with no original tech",
+      "No whitepaper or tokenomics explanation",
+      "Anon team with a history of abandoned projects"
+    ],
+    "risks": [
+      "High probability of rug pull or immediate exit",
+      "No utility for the proposed governance token"
+    ]
+  }
+}

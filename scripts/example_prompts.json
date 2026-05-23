@@ -1,0 +1,20 @@
+{
+  "system_instruction": "You are a senior Web3 Venture Capital analyst auditing a startup proposal for seed funding. Your assessment must be highly technical, objective, and realistic.",
+  "evaluations": [
+    {
+      "stage": "codebase_audit",
+      "target": "GitHub repository content",
+      "prompt_template": "Analyze this scraped repository code content:\n---\n{github_scraped_text}\n---\nAudit the codebase for: 1. Code authenticity (is this a direct fork or copy-paste repo?). 2. Implementation quality (commenting, unit tests, structure). 3. Technical complexity (custom cryptographic primitives, optimized smart contract designs, or complex math). Output your findings in a structured list."
+    },
+    {
+      "stage": "website_compliance",
+      "target": "Website landing page",
+      "prompt_template": "Read the following website scraped text:\n---\n{website_scraped_text}\n---\nAnalyze the marketing messaging and product feasibility. Check for overhyped promises, exit scam red flags, dynamic tokenomics alignment, and clarity of the user value proposition."
+    },
+    {
+      "stage": "final_investment_memo",
+      "target": "Combined resources",
+      "prompt_template": "You are an expert Web3 Venture Capital Analyst. Analyze the following startup proposal:\nProject Name: {project_name}\nDescription: {pitch_description}\nWebsite Content: {website_content}\nGitHub Content: {github_content}\nWhitepaper Content: {whitepaper_content}\nRequested Funding: {funding_requested} GEN.\n\nEvaluate the following aspects:\n1. Technical quality of the codebase or pitch\n2. Innovation and uniqueness\n3. Scam probability (is it a clone, low effort rug risk, etc.)\n4. Market potential and target addressable market\n5. Token utility and tokenomics soundness\n\nRespond ONLY in the following strict JSON format:\n{\n  \"recommendation\": \"INVEST\" or \"PASS\",\n  \"confidence\": <integer between 0 and 100>,\n  \"technical_score\": <integer between 0 and 100>,\n  \"market_score\": <integer between 0 and 100>,\n  \"scam_probability\": <integer between 0 and 100>,\n  \"summary\": \"<comprehensive 2-3 sentence analysis summary>\",\n  \"strengths\": [\"strength 1\", \"strength 2\"],\n  \"weaknesses\": [\"weakness 1\", \"weakness 2\"],\n  \"risks\": [\"risk 1\", \"risk 2\"]\n}"
+    }
+  ]
+}
