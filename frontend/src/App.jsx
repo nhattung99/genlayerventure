@@ -27,7 +27,7 @@ import {
   Wallet
 } from 'lucide-react';
 import { createClient, createAccount } from 'genlayer-js';
-import { testnetBradbury } from 'genlayer-js/chains';
+import { studionet } from 'genlayer-js/chains';
 
 // Pre-populated realistic fallback proposals in case node RPC has connection issues
 const FALLBACK_PROPOSALS = [
@@ -57,7 +57,7 @@ const FALLBACK_PROPOSALS = [
 ];
 
 const DEFAULT_CONTRACT = import.meta.env.VITE_CONTRACT_ADDRESS || '0xEcC25ffe11aFE174A45Dd9c0938C7e2a031b5642';
-const DEFAULT_RPC = import.meta.env.VITE_RPC_URL || 'https://rpc-bradbury.genlayer.com';
+const DEFAULT_RPC = import.meta.env.VITE_RPC_URL || 'https://studio.genlayer.com/api';
 
 function App() {
   const [activeTab, setActiveTab] = useState('proposals');
@@ -143,7 +143,7 @@ function App() {
       
       const client = createClient({
         chain: {
-          ...testnetBradbury,
+          ...studionet,
           rpcUrls: {
             default: { http: [rpcEndpoint] }
           }
